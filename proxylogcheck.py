@@ -3,10 +3,7 @@
   Author:      Christopher Ramirez
   Program:     Proxy Log File Analyser (Python Script)
   Version:     1.0
-  Class:       3662C Develop Software
-  Instructor:  John Chetcuti
-  Date:        12-10-2005
-  Description:  WWIT4 uses a program known as FreeProxy to crack down on users/students accessing
+  Description:  A program known as FreeProxy used to crack down on users accessing
                 forbidden sites that do not relate to their work or learning. A proxy log file is generated
                 each day for the Administrators to view but it does not make it for easy readability.
 
