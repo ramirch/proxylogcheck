@@ -48,11 +48,10 @@ import sys
 import logging
 
 ProxyLog = "access " + Day + " " + ShortMonth + ".txt"
+print(ProxyLog)
 
 if os.path.isfile(ProxyLog):
-    print   
-    print "Proxy Log for", Month + " " + Day, "exists and will now be read!"
-    print 
+    print(f"Proxy Log for {Month} {Day}, exists and will now be read!")
     MY_FILE = open(ProxyLog, 'r')
 else:
     from logging.handlers import NTEventLogHandler
@@ -117,8 +116,9 @@ while proxyline:
 
 
 NoDupesList = dict([(i,0) for i in UsernameURLList]).keys()
-NoDupesList.sort()                       
-print NoDupesList                        
+sorted(NoDupesList)
+#NoDupesList.sort()                       
+print(NoDupesList)
 
 
 #---------------------------------------------------------
@@ -146,19 +146,19 @@ ForbiddenMonthPath = Forbidden_Path + PathSep + Month
 
 if not os.path.isdir(Forbidden_Path):                        
     print
-    print "Forbidden directory does not exist. Making directory now."
+    print("Forbidden directory does not exist. Making directory now.")
     os.mkdir(Forbidden_Path)    
 else:
     print
-    print "Forbidden directory already exists"
+    print("Forbidden directory already exists")
 
 
 if not os.path.isdir(ForbiddenMonthPath):   
     print
-    print Month, "directory does not exist. Making directory now."
+    print(f"{Month} directory does not exist. Making directory now.")
     os.mkdir(ForbiddenMonthPath)
 else:
-    print Month, "directory already exists."
+    print(f"{Month} directory already exists.")
 
 #_____________________________________________________________
 
